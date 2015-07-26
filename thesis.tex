@@ -1,0 +1,61 @@
+%\RequirePackage{fix-cm}
+\documentclass{ntuthesis}
+
+\usepackage{times}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{wallpaper}
+
+% Using the tex-text mapping for ligatures etc.
+\defaultfontfeatures{Mapping=tex-text}
+
+% Set the default fonts
+\setmainfont{times.ttf}
+\setCJKmainfont{kaiu.ttf}
+
+% Watermark
+\CenterWallPaper{0.174}{watermark.pdf} 
+\setlength{\wpXoffset}{6.1725cm}
+\setlength{\wpYoffset}{10.5225cm}   
+
+\newgeometry{top=3cm,left=3cm,bottom=2cm,right=3cm}
+
+% Your information goes here
+\input{ntuvars}
+
+\begin{document}
+
+\frontmatter 
+\makecover 
+\makecertification
+
+\input{acknowledgements}
+\input{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+\input{introduction}
+\input{related}
+\input{technical}
+\input{experiment}
+\input{conclusion}
+
+%\appendix
+
+\backmatter
+
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{abbrv}
+
+% Your bibliography goes here
+\bibliography{thesis}
+
+\end{document}

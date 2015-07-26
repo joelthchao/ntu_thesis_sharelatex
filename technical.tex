@@ -1,0 +1,23 @@
+\chapter{Technical Details}
+\label{c:tech}
+
+In this section we describe a framework based on the Deformable Part Model (DPM) ...
+
+\section{Sparse Coding}
+
+\begin{equation} \label{eqOMP}
+  \begin{aligned}
+    & \min_{\alpha_{ij}, D_j}\sum
+    _{i=1}^N&&\begin{Vmatrix}X_i-\sum_{j=1}^K\alpha_{ij}D_j\end{Vmatrix}_2^2\\
+    & \text{subject to} && \left \| \alpha_i \right \|_0 \leq 
+    \epsilon, \forall i=1,...,N\\
+    &&& \left \|D_j \right \|_2 = 1, \forall j=1,...,K
+  \end{aligned}
+\end{equation}
+%
+
+In Equation \ref{eqOMP} ...
+
+\section{Regularized Sparse Coding} \label{secRSC}
+
+The previous section has shown the capability of sparse coding, but here we provide some observations to help revise sparse coding into our method, which is called Regularized Sparse Coding. ...

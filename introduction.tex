@@ -1,0 +1,14 @@
+\chapter{Introduction}
+\label{c:intro}
+
+In object detection, many works based on part-based model such as the Deformable Part Model (DPM) \cite{voc-release5}.
+
+To tackle the problem, we proposed Regularized Sparse Coding which is optimized for filter functionality\protect\footnotemark[1].
+
+\footnotetext[1]{In this work we call the ability of filter to produce accurate score map in object detection as \textit{filter functionality}.}
+
+\begin{itemize}
+  \item We propose Regularized Sparse Coding to reconstruct filter functionality which sparse coding cannot reconstruct successfully.
+  \item We conduct experiments on several large datasets with up to 200 classes to prove scalability of our method. 
+  \item We achieve 16 times speedup using only 1.25\% memory with less than 0.04 mAP drop compared to the original Deformable Part Model.
+\end{itemize}

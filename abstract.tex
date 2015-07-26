@@ -1,12 +1,12 @@
 \begin{abstractzh}
 
-在實際的應用上，一個物件偵測系統需要有能力偵測大量的物件類別才能符合使用者需求，許多成功的物件偵測系統使用了部件模型，針對每個物件類別個別訓練部件模型（分類器）以達成多類別物件偵測系統的需求。但是這些方法有正比於物件類別數量的運算複雜度，將會造成相當長的運算時間，為了解決這個問題，有些研究學習編碼簿使得運算可以直接在編碼簿上進行，使得運算複雜度可以不再正比於物件類別數量，但是這些研究並未考量到分類器的特性：分類器其實是向量支持機的權重，他們把適用於視覺訊號的方法使用在其之上，導致在高加速需求下損失大量準確度。為了解決此問題，我們發展出一個新的方法，名為正規化稀疏編碼，被設計來重建分類器的功能。換句話說，此方法重建了分類器產生精確分類分數的能力。我們的方法可以透過最小化分數誤差來重建分類器，相對於一般的稀疏編碼是透過最小化分類器外表誤差來重建分類器，這樣的策略差別使得我們的方法可以在高加速需求下只損失相當少的準確度。在擁有200個物件類別的ILSVRC2013資料集，我們可以在單一中央處理單元的環境下只使用1.25\%的記憶體達到16倍的加速，只損失0.04平均準度均值（相比於原始的可變形部件模型）。除此之外，此方法可以套用在圖像處理器上進行平行運算以達到更高的加速。
+在實際的應用上，...，此方法可以套用在圖像處理器上進行平行運算以達到更高的加速。
 
 \end{abstractzh}
 
 \begin{abstracten}
 	
-For practical applications, an object detection system requires huge number of classes to meet real world needs. Many successful object detection systems use part-based model which trains several filters (classifiers) for each class to perform multiclass object detection. However, these methods have linear computational complexity in regard to the number of classes and may lead to huge computing time. To solve the problem, some works learn a codebook for the filters and conduct operations only on the codebook to make computational complexity sublinear in regard to the number of classes. But the past studies missed to consider filter characteristics, e.g., filters are weights trained by Support Vector Machine, and rather they applied method such as sparse coding for visual signals' optimization. This misuse results in huge accuracy loss when a large speedup is required. ...
+For practical applications, ... This misuse results in huge accuracy loss when a large speedup is required. ...
 
 \end{abstracten}
 

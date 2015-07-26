@@ -1,3 +1,3 @@
 # ntu_thesis_sharelatex
-NTU thesis deploy on sharelatex
-Based on https://github.com/tzhuan/ntu-thesis
+<div>NTU thesis deploy on sharelatex</div>
+<div>Based on https://github.com/tzhuan/ntu-thesis</div>

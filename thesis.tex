@@ -1,6 +1,7 @@
 %\RequirePackage{fix-cm}
 \documentclass{ntuthesis}
 
+\usepackage{pdfpages}
 \usepackage{times}
 \usepackage{verbatim}
 \usepackage{color}
@@ -32,6 +33,9 @@
 \frontmatter 
 \makecover 
 \makecertification
+
+% Replace empty certification with scanned version
+%\includepdf{certification.pdf}
 
 \input{acknowledgements}
 \input{abstract}
